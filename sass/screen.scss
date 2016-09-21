@@ -1,0 +1,101 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+ * CONTENTS
+ *
+ * SETTINGS
+ * variables .........变量集中存储文件
+ *
+ * TOOLS
+ *
+ * COMPONENTS
+ * reset ..............Compass内置浏览器重置样式文件
+ *
+ * BUSINESS
+ *
+ * BASE
+ * screen.scss.........针对当前站点主页的样式修饰
+ * 
+ */
+
+@import 'variables',"mixin",'compass/reset';
+
+@import 'compass/css3';
+@import 'compass/support';
+@import 'compass/typography';
+
+@import 'compass/utilities';
+
+@import 'icons';
+
+body{
+	text-align:center;
+}
+//主题样式
+header .headline{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #ccc;
+	font-family: $headline-ff;
+}
+
+/*页面主题页面样式*/
+.main-sec{
+	margin: 0 auto;
+	text-align: center;
+	font-family: $main-sec-ff;
+	@include legacy-pie-clearfix();
+	.headline{
+		text-align:left;
+		font: {
+			family: $main-sec-ff;
+			size: 16px;
+		}
+
+	}
+	.detail{
+		display: block;
+		text-align: left;
+		font-size: 12px;
+	}
+}
+
+.webdemo-sec{
+	margin: 10px;
+	width: 300px;
+	height: 65px;
+  padding: 20px 20px 20px 100px;
+	@include col-sm(30);
+	@include box-shadow(1px 1px 3px 2px #cfcecf);
+	&:hover{
+		background-color: #f5f5f5;
+	}
+}
+$iconMap:(
+	1: analyzer, 
+	2: equation,
+	3: music,
+	4: search,
+	5: shape,
+	6: superimposed,
+	7: translate,
+	8: write 
+	);
+@each $key, $val in $iconMap{
+	.webdemo-sec:nth-child(#{$key}){
+		@include logo-sprite($val);
+	}
+}
+
+.goods-price{
+	$table-color: #7a98c6;
+	@include outer-table-borders();
+	@include inner-table-borders(1px, darken($table-color, 40%));
+	@include table-scaffolding();
+	@include alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg),#222222);
+}
+
+

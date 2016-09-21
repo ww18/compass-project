@@ -1,0 +1,13 @@
+{
+	"name": "compass-project",
+  "private": true,
+  "version": "0.0.1",
+  "description": "MY DESCRIPTION",
+  "main": "",
+	"devDependencies": {
+    "http-server": ""
+  },
+  "scripts": {
+     "start": "http-server -a 0.0.0.0 -p 8000"
+  }
+}

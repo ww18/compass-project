@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+ * CONTENTS
+ *
+ * SETTINGS
+ * variables .........变量集中存储文件
+ *
+ * TOOLS
+ *
+ * COMPONENTS
+ * reset ..............Compass内置浏览器重置样式文件
+ *
+ * BUSINESS
+ *
+ * BASE
+ * screen.scss.........针对当前站点主页的样式修饰
+ * 
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.logo-sprite, .logo-analyzer, .logo-analyzeractive, .logo-analyzerhover, .logo-equation, .logo-music, .logo-search, .logo-shape, .logo-superimposed, .logo-translate, .logo-write, .webdemo-sec:nth-child(1), .webdemo-sec:nth-child(2), .webdemo-sec:nth-child(3), .webdemo-sec:nth-child(4), .webdemo-sec:nth-child(5), .webdemo-sec:nth-child(6), .webdemo-sec:nth-child(7), .webdemo-sec:nth-child(8) {
+  background-image: url('/images/logo-se1c910144e.png');
+  background-repeat: no-repeat;
+}
+
+.logo-analyzer {
+  background-position: 0 0;
+}
+
+.logo-analyzeractive {
+  background-position: 0 -113px;
+}
+
+.logo-analyzerhover {
+  background-position: 0 -226px;
+}
+
+.logo-equation {
+  background-position: 0 -339px;
+}
+
+.logo-music {
+  background-position: 0 -452px;
+}
+
+.logo-search {
+  background-position: 0 -565px;
+}
+
+.logo-shape {
+  background-position: 0 -678px;
+}
+
+.logo-superimposed {
+  background-position: 0 -791px;
+}
+
+.logo-translate {
+  background-position: 0 -904px;
+}
+
+.logo-write {
+  background-position: 0 -1017px;
+}
+
+body {
+  text-align: center;
+}
+
+header .headline {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-family: Braggadocio, Arial, Verdana, Helvetica, sans-serif;
+}
+
+/*页面主题页面样式*/
+.main-sec {
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  *zoom: 1;
+}
+.main-sec:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.main-sec .headline {
+  text-align: left;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.main-sec .detail {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+}
+
+.webdemo-sec {
+  margin: 10px;
+  width: 300px;
+  height: 65px;
+  padding: 20px 20px 20px 100px;
+  -moz-box-shadow: 1px 1px 3px 2px #cfcecf;
+  -webkit-box-shadow: 1px 1px 3px 2px #cfcecf;
+  box-shadow: 1px 1px 3px 2px #cfcecf;
+}
+@media (min-width: 768px) {
+  .webdemo-sec {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.webdemo-sec:hover {
+  background-color: #f5f5f5;
+}
+
+.webdemo-sec:nth-child(1) {
+  background-position: 0 0;
+}
+
+.webdemo-sec:nth-child(2) {
+  background-position: 0 -339px;
+}
+
+.webdemo-sec:nth-child(3) {
+  background-position: 0 -452px;
+}
+
+.webdemo-sec:nth-child(4) {
+  background-position: 0 -565px;
+}
+
+.webdemo-sec:nth-child(5) {
+  background-position: 0 -678px;
+}
+
+.webdemo-sec:nth-child(6) {
+  background-position: 0 -791px;
+}
+
+.webdemo-sec:nth-child(7) {
+  background-position: 0 -904px;
+}
+
+.webdemo-sec:nth-child(8) {
+  background-position: 0 -1017px;
+}
+
+.goods-price {
+  border: 2px solid black;
+}
+.goods-price thead th {
+  border-bottom: 2px solid black;
+}
+.goods-price tfoot th, .goods-price tfoot td {
+  border-top: 2px solid black;
+}
+.goods-price th:first-child {
+  border-right: 2px solid black;
+}
+.goods-price th, .goods-price td {
+  border-right: 1px solid #233551;
+  border-bottom: 1px solid #233551;
+  border-left-width: 0;
+  border-top-width: 0;
+}
+.goods-price th:last-child, .goods-price td:last-child {
+  border-right-width: 0;
+}
+.goods-price th.last, .goods-price td.last {
+  border-right-width: 0;
+}
+.goods-price tbody tr:last-child th, .goods-price tbody tr:last-child td, .goods-price tfoot tr:last-child th, .goods-price tfoot tr:last-child td {
+  border-bottom-width: 0;
+}
+.goods-price tbody tr.last th, .goods-price tbody tr.last td, .goods-price tfoot tr.last th, .goods-price tfoot tr.last td {
+  border-bottom-width: 0;
+}
+.goods-price th {
+  text-align: center;
+  font-weight: bold;
+}
+.goods-price td,
+.goods-price th {
+  padding: 2px;
+}
+.goods-price td.numeric,
+.goods-price th.numeric {
+  text-align: right;
+}
+.goods-price th {
+  background-color: white;
+}
+.goods-price th.even, .goods-price th:nth-child(2n) {
+  background-color: #dddddd;
+}
+.goods-price tr.odd td, .goods-price tr:nth-child(2n+1) td {
+  background-color: #98c67a;
+}
+.goods-price tr.odd td.even, .goods-price tr.odd td:nth-child(2n), .goods-price tr:nth-child(2n+1) td.even, .goods-price tr:nth-child(2n+1) td:nth-child(2n) {
+  background-color: #76a458;
+}
+.goods-price tr.even td {
+  background-color: #7a98c6;
+}
+.goods-price tr.even td.even, .goods-price tr.even td:nth-child(2n) {
+  background-color: #5876a4;
+}
+.goods-price tfoot th, .goods-price tfoot td {
+  background-color: white;
+}
+.goods-price tfoot th.even, .goods-price tfoot th:nth-child(2n), .goods-price tfoot td.even, .goods-price tfoot td:nth-child(2n) {
+  background-color: #dddddd;
+}
